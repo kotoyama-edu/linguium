@@ -1,0 +1,172 @@
+.container {
+  background: white;
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  position: relative;
+  font-size: 22px;
+  transition: background 0.3s ease-in-out;
+
+  .note {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 8%;
+
+    @media (max-width: 640px) {
+      width: 100%;
+      padding: 5% 2%;
+    }
+
+    header {
+      margin: 1.5em 0;
+
+      p {
+        font-size: 16px;
+        font-style: italic;
+      }
+    }
+  }
+
+  .tooltip {
+    width: 65%;
+    margin: 0 auto;
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+    padding: .1rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 640px) {
+      width: 100%;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    .icon-tooltip {
+      margin-left: auto;
+
+      .md-icon {
+        color: gray;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .actions {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    padding: 3% 3% 0 3%;
+
+    @media (max-width: 640px) {
+      padding-bottom: 3%;
+    }
+
+    a {
+      cursor: pointer;
+      font-size: 18px;
+      opacity: 0.32;
+      color: black;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+
+      .back {
+        color: black;
+      }
+
+      &:hover {
+        color: black;
+        text-decoration: none;
+        opacity: 0.55;
+      }
+    }
+
+
+    .icon-action {
+      float: right;
+      margin-left: 45px;
+
+      .action {
+        color: black;
+        cursor: pointer;
+        font-size: 45px !important;
+        opacity: 0.32;
+        transition: opacity 50ms linear;
+
+        &:hover {
+          color: black;
+          opacity: 0.55;
+        }
+      }
+    }
+  }
+
+  .content {
+    width: 80%;
+    margin: auto;
+    padding: 1% 8% 4% 8%;
+    font-family: 'Playfair Display', serif;
+
+    @media (max-width: 640px) {
+      width: 100%;
+      padding: 0 2% 10% 2%;
+    }
+
+    p {
+      text-align: justify;
+    }
+
+    h1 {
+      text-align: center;
+
+      @media (max-width: 800px) {
+        font-size: 60px;
+      }
+    }
+
+    .dialog-button {
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+    }
+  }
+}
+
+.snackbar {
+  background-color: gray !important;
+  color: white !important;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+
+  .to-dict {
+    float: right;
+    border: 1px solid white;
+
+    &:hover,
+    &:active {
+      color: gray;
+      background: white;
+    }
+  }
+}
+
+.dark {
+  background-color: #171717 !important;
+  color: white;
+
+  .tooltip {
+    color: #383d41;
+    background-color: #e2e3e5;
+    border-color: #d6d8db;
+  }
+
+  a,
+  .back,
+  .action {
+    color: white !important;
+  }
+}

@@ -1,0 +1,221 @@
+.wrapper {
+  min-height: calc(100vh - 84px);
+  padding: 120px 10px 15px 10px;
+  display: flex;
+  flex-direction: column;
+
+  section {
+    padding: 28px 0;
+  }
+
+  .hello-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 76rem;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap-reverse;
+
+    .container {
+      width: 100%;
+      flex: 0 0 auto;
+      margin: 0 auto;
+      max-width: 1280px;
+      padding: 0 16px;
+
+      @media (max-width: 768px) {
+        flex-wrap: wrap;
+      }
+
+      .left-side {
+        display: flex;
+        justify-content: center;
+        margin-right: 1.55rem;
+        padding: 8px;
+
+        @media (min-width: 768px) {
+          float: left;
+          width: 50%;
+          padding: 0;
+        }
+
+        @media (max-width: 767px) {
+          padding: 0;
+        }
+
+        img {
+          max-width: 100%;
+          width: auto;
+        }
+      }
+
+      .right-side {
+        padding: 28px 0;
+        text-align: left;
+        margin-top: calc(1% + 10px);
+        padding-top: 0;
+
+        @media (min-width: 1024px) {
+          float: left;
+          width: 50%;
+          max-width: 28rem;
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          flex-direction: column;
+        }
+
+        @media (max-width: 1023px) {
+          padding: 0;
+        }
+
+        @media (max-width: 767px) {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+        }
+
+        h1 {
+          font-size: 3.25rem;
+          margin: 0;
+          text-align: left;
+          font-weight: 700;
+          font-family: Paytone One, sans-serif;
+          line-height: 1.4;
+
+          @media (max-width: 1023px) {
+            font-size: 2.8rem;
+            line-height: 1.2;
+          }
+
+          @media (max-width: 767px) {
+            font-size: 2.25rem;
+          }
+        }
+
+        p {
+          font-size: 1.325rem;
+          margin-bottom: 1.5rem;
+          line-height: 1.8;
+
+          @media (max-width: 1023px) {
+            font-size: 1.125rem;
+          }
+
+          @media (max-width: 767px) {
+            margin-bottom: 1rem;
+          }
+        }
+
+        .md-button {
+          padding: .75rem 1.5rem;
+          background-color: #5c9ce6;
+          color: #fff;
+          border-radius: 6px;
+          font-size: 1rem;
+        }
+
+      }
+    }
+  }
+
+  .promotion {
+    .container {
+      width: 100%;
+      flex: 0 0 auto;
+      margin: 0 auto;
+      padding: 0 2rem;
+      max-width: 1280px;
+
+        h1 {
+          font-size: 1.875rem;
+          line-height: 1.4;
+        }
+
+        .promises {
+          display: flex;
+          flex-wrap: wrap;
+          text-align: center;
+          list-style: none;
+          padding: 0;
+          margin: 0;
+
+          &:last-child {
+            @media (max-width: 768px) {
+              justify-content: center;
+            }
+          }
+
+          .promise-item {
+            padding-left: 2.7rem;
+            padding-right: 2.7rem;
+            margin-bottom: 1.25rem;
+            text-align: center;
+            width: 33.33333%;
+
+            &:last-child {
+              @media (max-width: 768px) {
+                width: 90%;
+              }
+            }
+
+            @media (max-width: 768px) {
+              width: 50%;
+            }
+
+            @media (max-width: 579px) {
+              width: 100%;
+            }
+
+            span {
+              display: block;
+              font-size: 1.25rem;
+              margin-bottom: .5rem;
+            }
+
+            p {
+              font-size: 1rem;
+              text-align: justify;
+
+              @media (max-width: 1023px) {
+                text-align: center;
+              }
+            }
+
+            .promise-img {
+              margin-bottom: .75rem;
+
+              img {
+                width: 22rem;
+                height: auto;
+              }
+            }
+          }
+        }
+    }
+  }
+
+  .about-project {
+    .container {
+      margin: 0 auto;
+      width: 50%;
+      padding: 10px;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+
+      h1 {
+        font-size: 1.875rem;
+        line-height: 1.4;
+      }
+
+      p {
+        font-size: 1rem;
+        text-align: justify;
+      }
+    }
+  }
+}

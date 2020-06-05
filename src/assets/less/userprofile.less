@@ -1,0 +1,85 @@
+.container {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 84px);
+  padding: 95px 10px 15px 10px;
+  margin: 0 auto;
+
+  .userprofile {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    .column {
+      position: relative;
+      width: 100%;
+
+      .account-info,
+      .userdata {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .account-info {
+    max-width: 300px;
+    padding: 30px;
+
+    .profile-pic {
+      .avatar {
+        object-fit: cover;
+        border-radius: 50%;
+        width: 150px;
+        height: auto;
+        max-height: 150px;
+        border: 5px solid #434175;
+      }
+    }
+
+    .profile-description {
+      text-align: center;
+    }
+
+    .md-list,
+    .md-list-item {
+      background: rgb(80,78,100);
+    }
+  }
+
+  .userdata {
+    max-width: 790px;
+    margin: 0 auto;
+    margin-top: 25px;
+  }
+}
+
+@media (min-width: 1119px) {
+  .userprofile {
+    -ms-flex: 0 0 66.666667%;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+  }
+
+  .account-info {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+}
+
+@media (max-width: 1118px) {
+  .container .account-info {
+    max-width: 100%;
+  }
+}
+
+.component-fade-enter-active, .component-fade-leave-active {
+  transition: opacity .2s ease;
+}
+
+.component-fade-enter, .component-fade-leave-to {
+  opacity: 0;
+}

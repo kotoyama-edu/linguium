@@ -1,0 +1,97 @@
+header {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 25px;
+
+  .search {
+    position: relative;
+    margin-right: 40px;
+
+    &:hover #search {
+      width: 300px;
+    }
+
+    &:after{
+      content: '';
+      position: absolute;
+      display: block;
+      top: 5px;
+      right: 10px;
+      width: 20px;
+      height: 20px;
+      background: url('../svg/search-white-18dp.svg') no-repeat;
+    }
+
+    #search {
+      border-radius: 15px;
+      border: none;
+      padding: 7px 30px 7px 15px;
+      width: 30px;
+      transition: .3s;
+      background: rgb(80,78,100);
+
+      &::placeholder {
+        color: white;
+      }
+
+      &:focus {
+        outline: none;
+        width: 300px;
+      }
+    }
+  }
+}
+
+.books-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  #animation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-top: 30px;
+
+    .userbook {
+      display: flex;
+      max-width: 250px;
+      transition: transform 1s;
+      cursor: pointer;
+
+      .img-container img {
+        width: auto;
+        height: 250px;
+        display: flex;
+        margin: 20px;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 801px) {
+  .books-container #animation {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 629px) {
+  header .search #search:focus {
+    width: 150px;
+  }
+
+  header .search:hover #search {
+    width: 150px;
+  }
+}
+
+.books-group-move {
+  transition: transform 1s;
+}

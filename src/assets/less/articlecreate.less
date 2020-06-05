@@ -1,0 +1,119 @@
+.container {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 84px);
+  padding: 75px 10px 20px 10px;
+  margin: 0 auto;
+
+  .article-create {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    .column {
+      position: relative;
+      width: 100%;
+
+      .left-side,
+      .right-side {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+
+    .left-side {
+      max-width: 800px;
+      margin: 0 auto;
+
+      .editor {
+        padding: 2rem 0;
+        max-width: 43rem;
+        margin-left: auto;
+        margin-right: auto;
+
+        .menubar {
+          margin-bottom: .9rem;
+          transition: visibility .2s .4s, opacity .2s .4s;
+        }
+
+        .md-button {
+          min-width: 10px;
+        }
+
+        .editor-content {
+          overflow-wrap: break-word;
+          word-wrap: break-word;
+          word-break: break-word;
+          text-align: left;
+        }
+      }
+    }
+
+    .right-side {
+      max-width: 300px;
+      margin: 0 auto;
+      padding-top: 55px;
+      padding-left: 1rem;
+      text-align: left;
+
+      .md-button {
+        padding: 0 2rem;
+
+        &.cancel {
+          background-color: rgb(124, 124, 124);
+        }
+      }
+
+      .md-field::before,
+      .md-field::after {
+        position: relative;
+      }
+    }
+  }
+}
+
+@media (min-width: 1080px) {
+  .container .article-create .left-side {
+    -ms-flex: 0 0 66.666667%;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+  }
+
+  .container .article-create .right-side {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+}
+
+@media (max-width: 1079px) {
+  .container .article-create .right-side {
+    max-width: 100vh;
+    padding: 0 1rem;
+    margin: 0 auto;
+
+    .md-title {
+      text-align: left;
+    }
+
+    &:last-child {
+      text-align: center;
+    }
+  }
+}
+
+.shake-on-error /deep/ .md-duplicated {
+  animation-name: shake;
+  animation-duration: 0.5s;
+}
+
+@keyframes shake {
+  0% { transform: translate(15px); }
+  20% { transform: translate(-15px); }
+  40% { transform: translate(7px); }
+  60% { transform: translate(-7px); }
+  80% { transform: translate(3px); }
+  100% { transform: translate(0px); }
+}

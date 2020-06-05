@@ -1,0 +1,183 @@
+.container {
+  padding: 120px 10px 10px 10px;
+  min-height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  text-align: left;
+  margin-bottom: -50px;
+
+  .cover,
+  .content,
+  .parts {
+    padding: 10px;
+    min-height: calc(100vh - 185px);
+  }
+
+  .parts {
+    margin-top: 20px;
+  }
+
+  .cover {
+    margin-right: 10px;
+    width: 285px;
+    height: auto;
+  }
+
+  .content {
+    margin: 10px;
+    overflow: hidden;
+    min-height: 170px;
+    width: 400px;
+    height: auto;
+
+    .icon {
+      width: 50px;
+      display: inline-block;
+      margin-left: 5px;
+    }
+
+    .chips {
+      padding-bottom: 8px;
+
+      .chip {
+        margin: 4px 4px 4px 0;
+      }
+    }
+
+    > span {
+      margin: .5em 0;
+      display: block;
+      text-align: justify;
+    }
+
+    .button {
+      cursor: pointer;
+      margin-left: 4px;
+
+      &.start {
+        border: 1px solid #d53f8c;
+        color: #d53f8c;
+
+        &:hover,
+        &:active {
+          color: white;
+          background: #d53f8c;
+        }
+      }
+
+      &.bookmark {
+        color: white;
+        background: #448aff;
+      }
+
+      &.bookmarked {
+        color: white;
+        background: #448aff;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 814px) and (max-width: 1091px) {
+  .container  {
+    .content {
+      width: 60%;
+      margin: 8px;
+
+      > span {
+        margin: 1em 0;
+      }
+    }
+
+    .cover,
+    .content,
+    .parts {
+      min-height: calc(100vh - 300px);
+    }
+
+    .parts {
+      margin: 0;
+      width: 100%;
+
+      .md-headline {
+        text-align: center;
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 813px) {
+  .container {
+    flex-direction: column;
+
+    .content,
+    .cover,
+    .parts {
+      padding: 5px;
+    }
+
+    .parts {
+      min-height: calc(100vh - 310px);
+
+      .md-headline {
+        text-align: center;
+        display: block;
+      }
+    }
+
+    .content {
+      width: 95%;
+      margin: 5px;
+    }
+
+    .cover {
+      display: none;
+    }
+  }
+}
+
+.md-content {
+  background-color: inherit;
+  overflow: auto;
+  max-height: 250px;
+  margin-top: 10px;
+
+  .part {
+    .md-card {
+      background: rgb(80,78,100);
+      width: 320px;
+      display: inline-block;
+      margin: 4px 0;
+      vertical-align: top;
+      cursor: pointer;
+
+      &:hover {
+        background: rgb(88, 86, 110);
+      }
+
+      .md-card-header {
+        padding: 10px 10px 0 10px;
+
+        .md-icon {
+          float: right;
+        }
+
+        .md-subheading,
+        .md-caption {
+          line-height: 1.8;
+          margin-left: 5px;
+        }
+
+        .md-subheading {
+          font-weight: 400;
+          color: white;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
